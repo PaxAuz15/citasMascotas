@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "686572295453",
+    "project_id": "citas-mascotas",
+    "storage_bucket": "citas-mascotas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686572295453:android:51fff49e421b3279d2bdf4",
+        "android_client_info": {
+          "package_name": "com.mobiledev.citasmascotas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686572295453-2jndtpt0iium8po2q94rqvafem6cpriu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobiledev.citasmascotas",
+            "certificate_hash": "ee205a588e68ead388358126d56b0b5c26f49278"
+          }
+        },
+        {
+          "client_id": "686572295453-5n32ruhg5gqijkt4ge6e0g3ubksuugg6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8EfVAD9tYp-LfosXxVJG86jlLIlbrwCw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686572295453-5n32ruhg5gqijkt4ge6e0g3ubksuugg6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
