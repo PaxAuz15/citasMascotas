@@ -16,7 +16,7 @@ import java.util.Locale;
 public class AdapterItem extends RecyclerView.Adapter<AdapterItem.ItemViewHolder> {
     Context context;
     ArrayList<Cita> CitaArrayList;
-    Locale id = new Locale("in","ID");
+    Locale id = new Locale("es","EC");
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MMMM-YYYY",id);
 
     public AdapterItem(Context context, ArrayList<Cita> CitaArrayList) {
@@ -33,6 +33,7 @@ public class AdapterItem extends RecyclerView.Adapter<AdapterItem.ItemViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull AdapterItem.ItemViewHolder holder, int position) {
+        System.out.println(position);
         holder.viewBind(CitaArrayList.get(position));
     }
 
@@ -55,11 +56,19 @@ public class AdapterItem extends RecyclerView.Adapter<AdapterItem.ItemViewHolder
             tv_fecha = itemView.findViewById(R.id.tv_fecha);
         }
 
-        public void viewBind(Cita Cita) {
-            tv_tipoMascota.setText(Cita.getTipo_mascota());
-            tv_adaptadorDetalle.setText(Cita.getDetalle());
-            tv_total.setText(Cita.getTotal().toString());
-            tv_fecha.setText(simpleDateFormat.format(Cita.getFecha()));
+        public void viewBind(Cita cita) {
+            String detalle = null;
+            for(String d : cita.getDetalle()){
+                if(detalle ==null){
+                    detalle = d;
+                }else{
+                    detalle = detalle +", " + d;
+                }
+            }
+            tv_tipoMascota.setText("Tipo: "+cita.getTipo_mascota());
+            tv_adaptadorDetalle.setText("Detalle de la cita: "+detalle);
+            tv_total.setText("Total: "+cita.getTotal());
+            tv_fecha.setText("Fecha: "+simpleDateFormat.format(cita.getFecha()));
         }
     }
 }

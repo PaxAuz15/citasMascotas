@@ -10,29 +10,29 @@
         android:padding="10dp">
 
         <TextView
-            android:id="@+id/tv_totalShow"
+            android:id="@+id/tv_nama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tipo de Mascota"
+            android:text="Nama"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_adaptadorDetalle"
+            android:id="@+id/tv_jk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Detalle" />
+            android:text="Jenis Kelamin" />
 
         <TextView
-            android:id="@+id/tv_total"
+            android:id="@+id/tv_jurusan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Total" />
+            android:text="Jurusan" />
 
         <TextView
-            android:id="@+id/tv_fecha"
+            android:id="@+id/tv_tanggal_pendaftaran"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fecha" />
+            android:text="Tanggal pendaftaran" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

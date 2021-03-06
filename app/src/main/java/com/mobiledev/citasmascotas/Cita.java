@@ -1,15 +1,16 @@
 package com.mobiledev.citasmascotas;
 
+import java.util.ArrayList;
+
 public class Cita {
     String tipo_mascota;
-    String detalle;
-    Float total;
+    ArrayList<String> detalle;
+    double total;
     long fecha;
+public Cita(){
 
-    public Cita(){
-    }
-
-    public Cita(String tipo_mascota, String detalle, Float total, long fecha){
+}
+    public Cita(String tipo_mascota, ArrayList<String> detalle, double total, long fecha){
         this.tipo_mascota = tipo_mascota;
         this.detalle = detalle;
         this.total = total;
@@ -20,11 +21,11 @@ public class Cita {
         return tipo_mascota;
     }
 
-    public String getDetalle() {
+    public ArrayList<String> getDetalle() {
         return detalle;
     }
 
-    public Float getTotal() {
+    public double getTotal() {
         return total;
     }
 
@@ -36,11 +37,11 @@ public class Cita {
         this.tipo_mascota = tipo_mascota;
     }
 
-    public void setDetalle(String detalle) {
+    public void setDetalle(ArrayList<String> detalle) {
         this.detalle = detalle;
     }
 
-    public void setTotal(Float total) {
+    public void setTotal(double total) {
         this.total = total;
     }
 
