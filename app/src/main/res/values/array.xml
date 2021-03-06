@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="select">Selecciona una mascota</string>
+    <string-array name="spinnerItems">
+        <item>Selecciona una mascota</item>
+        <item>Perro</item>
+        <item>Gato</item>
+        <item>Tortuga</item>
+        <item>Conejo</item>
+    </string-array>
+</resources>
