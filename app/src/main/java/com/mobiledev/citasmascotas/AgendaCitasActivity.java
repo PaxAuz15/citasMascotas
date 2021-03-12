@@ -10,6 +10,7 @@ import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +26,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -56,7 +58,7 @@ public class AgendaCitasActivity extends AppCompatActivity implements View.OnCli
     Button btn_minimal,
             btn_maximal,
             cari,
-            btnDateIngreso;
+            btnDateIngreso, btnlogout;
     Calendar calendar = Calendar.getInstance();
     Locale id = new Locale("es", "EC");
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MMMM-YYYY", id);
@@ -93,7 +95,7 @@ public class AgendaCitasActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agenda_citas);
 
-
+        btnlogout = findViewById(R.id.logoutButton);
         cari = findViewById(R.id.cari);
         context = this;
         input_minimal = findViewById(R.id.input_minimal);
@@ -121,6 +123,13 @@ public class AgendaCitasActivity extends AppCompatActivity implements View.OnCli
         cari.setOnClickListener(this);
         tv_detalle.setOnClickListener(this);
         btnDateIngreso.setOnClickListener(this);
+        btnlogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(AgendaCitasActivity.this, MainActivity.class));
+            }
+        });
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
