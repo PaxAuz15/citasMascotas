@@ -75,6 +75,15 @@
                 android:layout_weight="1"
                 android:text="Acceder" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Desarrollado por: BYRON MENDOZA GARCIA"/>
+        </LinearLayout>
     </LinearLayout>
     <ProgressBar
         android:id="@+id/loading"
